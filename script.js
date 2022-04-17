@@ -182,6 +182,7 @@ class GameBoard {
     clearBoard() {
         this.#gameArray.fill('');
         this.#gameOver = false;
+        this.#currentTurn = 'X';
         return this.#gameArray;
     }
 }
@@ -194,6 +195,12 @@ gamePieces.forEach(piece => {
         updateUI();
         checkWin();
     })
+})
+
+document.querySelector('.reset-button').addEventListener('click', function() {
+    gameBoard.clearBoard();
+    updateUI();
+    document.querySelector('.result-container').textContent = "";
 })
 
 function checkWin() {
@@ -217,9 +224,9 @@ function updateUI() {
 }
 
 function win(playerID) {
-    alert(`${playerID} wins!`);
+    document.querySelector('.result-container').textContent = `${playerID} wins!`;
 }
 
 function tie() {
-    alert('It\'s a tie!');
+    document.querySelector('.result-container').textContent = "It's a tie!";
 }
