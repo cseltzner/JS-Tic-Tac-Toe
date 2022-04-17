@@ -2,6 +2,9 @@ const GAME_SIZE = 9;
 
 const gamePieces = document.querySelectorAll(".piece");
 
+/**
+ * Tic-tac-toe gameboard, able to handle arbitrary-sized square grids.
+ */
 class GameBoard {
     #gameArray
     #gameSize
