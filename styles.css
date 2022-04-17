@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    --border-preset: 2px solid black;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+.game-container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    font-size: 4rem;
+}
+
+.piece {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piece:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.piece-0 {
+    border-bottom: var(--border-preset);
+    border-right: var(--border-preset);
+}
+
+.piece-1 {
+    border-bottom: var(--border-preset);
+}
+
+.piece-2 {
+    border-bottom: var(--border-preset);
+    border-left: var(--border-preset);
+}
+
+.piece-3 {
+    border-right: var(--border-preset);
+}
+
+.piece-5 {
+    border-left: var(--border-preset);
+}
+
+.piece-6 {
+    border-top: var(--border-preset);
+    border-right: var(--border-preset);
+}
+
+.piece-7 {
+    border-top: var(--border-preset);
+}
+
+.piece-8 {
+    border-top: var(--border-preset);
+    border-left: var(--border-preset);
+}
